@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Itinerary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Travel Itinerary</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="log-in.html">Log-in</a></li>
+                <li><a href="create-itinerary.html">Create Itinerary</a></li>
+                <li><a href="view-itinerary.php">View Itinerary</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h1>Your Travel Itineraries</h1>
+
+        <?php if (empty($itineraries)): ?>
+            <p>You haven't created any itineraries yet.</p>
+            <p><a href="create-itinerary.html">Create a new itinerary</a></p>
+        <?php else: ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Travel Date</th>
+                        <th>Activities</th>
+                        <th>Created At</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($itineraries as $itinerary): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($itinerary["destination"]); ?></td>
+                            <td><?php echo htmlspecialchars($itinerary["travel_date"]); ?></td>
+                            <td><?php echo nl2br(htmlspecialchars($itinerary["activities"])); ?></td>
+                            <td><?php echo htmlspecialchars($itinerary["created_at"]); ?></td>
+                            </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        <?php endif; ?>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Itinerary App. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

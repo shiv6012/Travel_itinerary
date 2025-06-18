@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Itinerary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Travel Itinerary</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="log-in.html">Log-in</a></li>
+                <li><a href="create-itinerary.html">Create Itinerary</a></li>
+                <li><a href="view-itinerary.php">View Itinerary</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- <main>
+        <h1>Create Your Travel Itinerary</h1>
+        <form id="itinerary-form">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="activities">Activities:</label>
+            <textarea id="activities" name="activities" rows="4" required></textarea>
+
+            <button type="submit">Create Itinerary</button>
+        </form>
+    </main> -->
+
+    <form id="itinerary-form" action="create-itinerary.php" method="post">
+    <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <label for="travel_date">Travel Date:</label>
+    <input type="date" id="date" name="travel_date" required>
+
+    <label for="activities">Activities:</label>
+    <textarea id="activities" name="activities" rows="4" required></textarea>
+
+    <button type="submit">Create Itinerary</button>
+</form>
+        
+    <!-- <h1>Create Your Travel Itinerary</h1>
+        <?php if ($itinerary_success): ?>
+            <p style="color: green;"><?php echo $itinerary_success; ?></p>
+        <?php endif; ?>
+        <?php if ($itinerary_error): ?>
+            <p style="color: red;"><?php echo $itinerary_error; ?></p>
+        <?php endif; ?>
+        <form id="itinerary-form" action="create-itinerary.php" method="post">
+            <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" value="<?php echo htmlspecialchars($destination); ?>" required>
+
+            <label for="travel_date">Travel Date:</label>
+            <input type="date" id="date" name="travel_date" value="<?php echo htmlspecialchars($travel_date); ?>" required>
+
+            <label for="activities">Activities:</label>
+            <textarea id="activities" name="activities" rows="4" required><?php echo htmlspecialchars($activities); ?></textarea>
+
+            <button type="submit">Create Itinerary</button>
+        
+</form> -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Itinerary App. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

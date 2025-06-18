@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>➡️ 🗓️ 📍 ✈️Travel Itinerary🏨 📸 🍽️ 👋</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="log-in.html">Log-in</a></li>
+                <li><a href="create-itinerary.html">Create Itinerary</a></li>
+                <li><a href="view-itinerary.php">View Itinerary</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="signupFormContainer"> <h2 id="signupTitle">Sign Up</h2> <form id="signupForm" action="sign-up.php" method="POST"> <div id="signupUsernameGroup" class="form-group"> <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" name="username" required> </div>
+    <div id="signupEmailGroup" class="form-group"> <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" name="email" required> </div>
+    <div id="signupPasswordGroup" class="form-group"> <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="password" required> </div>
+    <button type="submit" id="signupButton">Sign Up</button> <p id="signupSwitchText">Already have an account? <a href="#" id="switchToLogin">Log in</a></p> <div id="signupError" class="error-message"></div> </form>
+</div>
+</div>
+<footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Travel Itinerary App. All rights reserved.</p>                
+        </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
